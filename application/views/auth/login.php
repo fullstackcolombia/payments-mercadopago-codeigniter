@@ -32,7 +32,6 @@
 	<body>
 		<div class="w-100 absolute fixed-top">
 			<p class="mt-1 mb-1 text-muted text-center">Usuarios de prueba</p>
-			<p class="mt-1 mb-1 text-muted text-center">Email: <b>admin@fullstackcolombia.com</b> ,Clave: <b>admin</b></p>
 			<p class="mt-1 mb-1 text-muted text-center">Email: <b>example@fullstackcolombia.com</b> ,Clave: <b>example</b></p>
 		</div>
 		<form enctype="multipart/form-data" method="post" class="form-signin mt-5">
