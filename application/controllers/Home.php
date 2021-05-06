@@ -38,6 +38,9 @@ class Home extends CI_Controller {
     }
 	
 	public function index(){
+		if(!is_https() AND $_SERVER['HTTP_HOST'] != '127.0.0.1'){
+			redirect('/');
+		}
 		$this->is_config_db();
 		$this->is_logged();
 		$this->load->library('mercadopay');

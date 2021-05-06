@@ -33,7 +33,10 @@ class Login extends CI_Controller {
     }
 
     public function index() {
-        $this->is_logged();//Aqui pregunta si esta logueado lo envia a home
+        if(!is_https() AND $_SERVER['HTTP_HOST'] != '127.0.0.1'){
+			redirect('/');
+		}
+		$this->is_logged();//Aqui pregunta si esta logueado lo envia a home
         $this->is_config_db();//Para cuando se ejecute la app por primera ves se creen las tablas
         $this->load->helper(array('form'));
         $this->load->library('form_validation');
